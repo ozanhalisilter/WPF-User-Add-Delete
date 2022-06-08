@@ -49,6 +49,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PeopleDataClass.cs" />
     <Compile Include="Views\Add User.xaml.cs">
       <DependentUpon>Add User.xaml</DependentUpon>
     </Compile>
