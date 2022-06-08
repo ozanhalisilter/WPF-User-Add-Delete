@@ -25,9 +25,9 @@ namespace WpfApp1.Views
         public SearchUser()
         {
             InitializeComponent();
-            people.Add(new Person("Ozan", "Halis", 23, "adawdjiwadjdiwa"));
-            myCombo.ItemsSource = people;
-            //myCombo.ItemsSource = ReadCSV(@"C:\GitHub2\WPF\WpfApp1\people"); ;
+            //people.Add(new Person("Ozan", "Halis", 23, "adawdjiwadjdiwa"));
+            //myCombo.ItemsSource = people;
+           myCombo.ItemsSource = ReadCSV(@"C:\GitHub2\WPF\WpfApp1\people");
 
             //
 
@@ -57,7 +57,8 @@ namespace WpfApp1.Views
             public int Age { get; set; }
             public string Address { get; set; }
 
-            public string FullName
+        
+        public string FullName
             {
                 get { return $"{FirstName} {LastName}"; }
 
@@ -67,8 +68,22 @@ namespace WpfApp1.Views
             public string V2 { get; }
             public int V3 { get; }
             public string V4 { get; }
+
+
+            public override string ToString()
+            {
+                return $"{FullName} {Age} {Address}";
+            }
         }
 
+        private void myCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var cbo = sender as ComboBox;
+            var selItem = cbo.SelectedItem;
+            myText.Text = selItem.ToString();
 
+        }
+
+      
     }
 }

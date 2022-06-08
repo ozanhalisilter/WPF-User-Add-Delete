@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -26,7 +27,18 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Hello {FullName.Text}");
+            using (FileStream fs = new FileStream("people.csv", FileMode.Append, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {   
+
+                    string[] line = new string[] { name.Text, surname.Text, age.Text, address.Text };
+                    MessageBox.Show(string.Join(",", line));
+                    sw.WriteLine(string.Join(",", line));
+                }
+            }
         }
+
+  
     }
 }
