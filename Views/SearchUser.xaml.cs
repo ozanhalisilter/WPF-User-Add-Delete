@@ -38,7 +38,7 @@ namespace WpfApp1.Views
 
             return lines.Select(line =>
             {
-                string[] data = line.Split(';');
+                string[] data = line.Split(',');
                 return new Person(data[0], data[1], Convert.ToInt32(data[2]), data[3]);
             });
         }
