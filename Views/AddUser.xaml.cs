@@ -17,9 +17,9 @@ namespace WpfApp1.Views
     /// <summary>
     /// Interaction logic for Add_User.xaml
     /// </summary>
-    public partial class Add_User : UserControl
+    public partial class AddUser : UserControl
     {
-        public Add_User()
+        public AddUser()
         {
             InitializeComponent();
         }

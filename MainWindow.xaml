@@ -10,11 +10,11 @@
 
     <TabControl>
         <TabItem Header="Add User">
-            <views:Add_User></views:Add_User>
+            <views:AddUser></views:AddUser>
         </TabItem>
         <TabItem Header="Search User">
-            <views:Search_User>
-            </views:Search_User>
+            <views:SearchUser>
+            </views:SearchUser>
         </TabItem>
         
     </TabControl>

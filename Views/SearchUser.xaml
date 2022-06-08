@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfApp1.Views.Search_User"
+﻿<UserControl x:Class="WpfApp1.Views.SearchUser"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -25,7 +25,8 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="myCombo" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  >
+        <ComboBox x:Name="myCombo" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" DisplayMemberPath="FullName" >
+            
             <!--<DataTemplate>
                 <TextBlock Text="{Binding FullName}"/>
             </DataTemplate>-->

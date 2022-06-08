@@ -18,16 +18,16 @@ namespace WpfApp1.Views
     /// <summary>
     /// Interaction logic for Search_User.xaml
     /// </summary>
-    public partial class Search_User : UserControl
+    public partial class SearchUser : UserControl
     {
 
         List<Person> people = new List<Person>();
-        public Search_User()
+        public SearchUser()
         {
             InitializeComponent();
             people.Add(new Person("Ozan", "Halis", 23, "adawdjiwadjdiwa"));
-
-            myCombo.ItemsSource = ReadCSV(@"C:\GitHub2\WPF\WpfApp1\people"); ;
+            myCombo.ItemsSource = people;
+            //myCombo.ItemsSource = ReadCSV(@"C:\GitHub2\WPF\WpfApp1\people"); ;
 
             //
 
