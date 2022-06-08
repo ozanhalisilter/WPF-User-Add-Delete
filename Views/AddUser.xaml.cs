@@ -27,18 +27,18 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            using (FileStream fs = new FileStream("people.csv", FileMode.Append, FileAccess.Write))
-            {
-                using (StreamWriter sw = new StreamWriter(fs))
-                {   
 
-                    string[] line = new string[] { name.Text, surname.Text, age.Text, address.Text };
-                    MessageBox.Show(string.Join(",", line));
-                    sw.WriteLine(string.Join(",", line));
-                }
-            }
+            string[] allLines = File.ReadAllLines(System.IO.Path.ChangeExtension("people.csv", ".csv"));
+
+            //TODO Async programming +8K line
+            // tekrar csv read 
+            
+
+            string[] arr = new string[] { name.Text, surname.Text, age.Text, address.Text };
+            string line = string.Join(",", arr);
+            MessageBox.Show(line);
+
         }
-
-  
     }
 }
+

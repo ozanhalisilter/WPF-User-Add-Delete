@@ -24,8 +24,12 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Text="Add User" FontSize="50"/>
-        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5">
-
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5" >
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Vertical"></Setter>
+                </Style>
+            </StackPanel.Style>
             <StackPanel.Resources>
                 <Style TargetType="TextBlock">
                     <Setter Property="FontSize" Value="17"/>
@@ -38,27 +42,30 @@
                     <Setter Property="Margin" Value="10"/>
 
                 </Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal"></Setter>
+                </Style>
             </StackPanel.Resources>
 
-            <StackPanel Orientation="Horizontal" >
+            <StackPanel  >
                 <TextBlock Text="Name"/>
                 <TextBox x:Name="name"  />
             </StackPanel>
 
 
-            <StackPanel Orientation="Horizontal" >
+            <StackPanel >
                 <TextBlock Text="Surname" />
                 <TextBox x:Name="surname"  />
             </StackPanel>
 
 
-            <StackPanel Orientation="Horizontal" >
+            <StackPanel >
                 <TextBlock Text="Age"/>
                 <TextBox x:Name="age"/>
             </StackPanel>
 
 
-            <StackPanel Orientation="Horizontal" >
+            <StackPanel >
                 <TextBlock Text="Address" />
                 <TextBox x:Name="address"  />
             </StackPanel>
