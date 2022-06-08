@@ -52,6 +52,7 @@
     <Compile Include="Views\AddUser.xaml.cs">
       <DependentUpon>AddUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Person.cs" />
     <Compile Include="Views\SearchUser.xaml.cs">
       <DependentUpon>SearchUser.xaml</DependentUpon>
     </Compile>
