@@ -1,4 +1,5 @@
 ﻿using System;
+<<<<<<< Updated upstream
 
 public class PeopleDataClass
 {
@@ -47,3 +48,47 @@ public class PeopleDataClass
     }
 
     }
+=======
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.IO;
+
+public class PeopleDataClass
+{
+    public PeopleDataClass()
+    {
+        IEnumerable<string[]> objects = ReadCSV("example");
+        MessageBox.Show(objects.ToString());
+    }
+
+    
+
+    public IEnumerable<string[]> ReadCSV(string fileName)
+    {
+        // We change file extension here to make sure it's a .csv file.
+        // TODO: Error checking.
+        string[] lines = File.ReadAllLines(System.IO.Path.ChangeExtension(fileName, ".csv"));
+
+        // lines.Select allows me to project each line as a Person. 
+        // This will give me an IEnumerable<Person> back.
+        return lines.Select(line =>
+        {
+            string[] data = line.Split(';');
+            // We return a person with the data in order.
+            return data;
+        });
+    }
+
+
+}
+>>>>>>> Stashed changes
