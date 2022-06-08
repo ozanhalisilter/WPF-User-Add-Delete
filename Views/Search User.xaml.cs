@@ -26,8 +26,12 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
             people.Add(new Person("Ozan", "Halis", 23, "adawdjiwadjdiwa"));
-
-            myCombo.ItemsSource = ReadCSV(@"C:\GitHub2\WPF\WpfApp1\people"); ;
+            DataContext = people;
+            //myCombo.ItemsSource = people;
+            string objects = ReadCSV(@"C:\GitHub2\WPF\WpfApp1\people").First().FirstName.ToString();
+            MessageBox.Show(objects);
+            
+            ; ;
 
             //
 
@@ -63,10 +67,7 @@ namespace WpfApp1.Views
 
             }
 
-            public string V1 { get; }
-            public string V2 { get; }
-            public int V3 { get; }
-            public string V4 { get; }
+            
         }
 
 

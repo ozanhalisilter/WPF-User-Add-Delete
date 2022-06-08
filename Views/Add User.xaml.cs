@@ -26,7 +26,7 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Hello {FullName.Text}");
+            MessageBox.Show($"Hello {fullName.Text}");
         }
     }
 }
